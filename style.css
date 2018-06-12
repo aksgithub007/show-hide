@@ -1,0 +1,40 @@
+#data{
+	display:block;
+	width:100%;
+	background-color:#333;
+	color: #fff;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+label{
+	color:#fff;
+	font-size:17px;
+	font-weight:bold;
+	
+}
+label::before{
+	content:'+ see more';
+	margin-left:10px;
+	cursor:pointer;
+}
+.more label::before{
+	content:'- see less';
+	margin-left:10px;
+	cursor:pointer;
+}
+input{
+	display:none;
+
+}
+.more{
+	display: none;
+
+}
+input:checked + label{
+	display:none;
+}
+input:checked + label + .more{
+	display:block;
+	transition: all 5s ease-in-out 0.4s;
+	
+}
